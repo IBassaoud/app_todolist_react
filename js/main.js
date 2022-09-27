@@ -24,6 +24,7 @@ class CreateTaskComponent extends React.Component {
                 key: 0
             }
         } else {
+            // React v18 might want to use the method UseId() to generate unique id for each element task
             let lastElement = this.state.tasks[this.state.tasks.length - 1]
             let lastElementKey = lastElement.key
             newTask = {
