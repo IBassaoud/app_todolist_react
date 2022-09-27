@@ -17,14 +17,26 @@ class CreateTaskComponent extends React.Component {
     }
 
     handleCreationTask = event => {
-        let lastElement = this.state.tasks[this.state.tasks.length - 1]
-        let lastElementKey = lastElement.key
-        let newTask = {
-            name: this.state.inputTask.current.value,
-            state: "status-todo",
-            stateText: "Todo",
-            key: lastElementKey + 1
+        let newTask;
+
+        if (this.state.tasks.length == 0){
+            newTask = {
+                name: this.state.inputTask.current.value,
+                state: "status-todo",
+                stateText: "Todo",
+                key: 0
+            }
+        } else {
+            let lastElement = this.state.tasks[this.state.tasks.length - 1]
+            let lastElementKey = lastElement.key
+            newTask = {
+                name: this.state.inputTask.current.value,
+                state: "status-todo",
+                stateText: "Todo",
+                key: lastElementKey + 1
+            }
         }
+       
 
         // Update the task list 
         if (this.state.inputTask.current.value != '') {
