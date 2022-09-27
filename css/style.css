@@ -48,13 +48,13 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-    #input_create {
+    .input_create {
         border-radius: 0.25em;
         margin-left: 0.5rem;
         margin-top: 0.5rem;
     }
 
-    #button_create {
+    .button_create {
         border-radius: 0.25em;
         margin-left: 0.5rem;
         margin-top: 0.5rem;
