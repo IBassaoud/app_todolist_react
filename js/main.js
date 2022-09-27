@@ -51,7 +51,7 @@ class CreateTaskComponent extends React.Component {
     }
 
     render() {
-        const input = <input type="text" id="creation_task_input" name="creation_task" ref={this.state.inputTask} />
+        const input = <input type="text" id="creation_task_input" name="creation_task" ref={this.state.inputTask} onKeyPress={ event => { if(event.key === "Enter") this.handleCreationTask() } } />
         const button = <input type="button" id="creation_task_button" value="Go" onClick={this.handleCreationTask} />
         return (
             <div id="create_task">
